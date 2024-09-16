@@ -1,0 +1,52 @@
+/* styles/authlayout.module.css */
+
+/* Container for the entire layout */
+.layoutContainer {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9fafb; /* Light background color */
+}
+
+/* Left side: Auth form container */
+.formContainer {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Right side: Image container */
+.imageContainer {
+  flex: 1;
+  height: 100vh;
+  display: none; /* Hide image on smaller screens by default */
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb; /* Light gray background for image */
+  position: relative; /* Ensure proper positioning for child elements */
+}
+
+/* Wrapper for the image to maintain aspect ratio */
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Relative positioning for the child Image component */
+}
+
+/* Styling for the image */
+.authImage {
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for larger screens to show the image */
+@media (min-width: 768px) {
+  .imageContainer {
+    display: flex; /* Show image on screens wider than 768px */
+  }
+}
