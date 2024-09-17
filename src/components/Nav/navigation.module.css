@@ -1,0 +1,98 @@
+.nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    z-index: 900000;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px; /* Ensure gap has a defined unit */
+    width: 30%;
+}
+
+/* Google Login Button */
+.googleLoginButton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    width: 100%; /* Change to 100% to allow responsiveness */
+    max-width: 180px; /* Limit max-width */
+    padding: 5px; /* Add padding for spacing */
+    border: solid 2px lightblue;
+    background-color: var(--white);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Image Styling */
+.image {
+    border-radius: 10px;
+}
+
+/* Button Styling */
+.button {
+    height: 50px;
+    width: 200px;
+    background-color: #00303F;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px; /* Add padding to create space inside */
+    transition: background-color 0.3s ease-in-out; /* Add transition effect */
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    background-color: #3367D6; /* Darker shade for hover */
+}
+
+/* Media Queries for responsiveness */
+
+/* Small screens (phones) */
+@media (max-width: 640px) {
+    .nav {
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        height: auto; /* Let the nav take up the necessary height */
+        padding: 10px;
+    }
+
+    .buttonContainer {
+        width: 100%;
+        gap: 15px; /* Adjust gap between buttons */
+    }
+
+    .googleLoginButton {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Remove max-width on small screens */
+        justify-content: center; /* Center text inside button */
+    }
+
+    .button {
+        width: 100%; /* Full width for buttons on small screens */
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .buttonContainer {
+        width: 50%; /* Increase width on medium screens */
+    }
+
+    .googleLoginButton {
+        width: 50%; /* Adjust button width */
+    }
+}

@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --darkgreen: #00303F;
+  --lightbrown: #CDAC81;
+  --grey1: #CAE4DB;
+  --grey2: #F5F4F4;
+  --lightblue: #4285F4;
+}
+
 /* Apply a smooth transition effect for common properties */
 * {
   @apply transition-all duration-300 ease-in-out;
