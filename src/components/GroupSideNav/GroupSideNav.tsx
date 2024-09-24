@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import GroupList from "../GroupList/GroupList";
 const GroupSideNav = ({className}) => {
   return (
