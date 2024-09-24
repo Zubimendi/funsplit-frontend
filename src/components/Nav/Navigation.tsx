@@ -22,7 +22,7 @@ const Navigation = () => {
         </Button>
         <Button
           onClick={() => {
-            if (isLoggedIn === false) handleGoogleLogin();
+            if (!isLoggedIn) handleGoogleLogin();
             else {
               console.log("Logged out");
             }

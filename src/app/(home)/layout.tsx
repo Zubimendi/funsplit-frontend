@@ -3,7 +3,7 @@ import MemberSideNav from "@/components/MembersSideNav/MemberSideNav";
 import GroupSideNav from "@/components/GroupSideNav/GroupSideNav";
 import styles from './layout.module.css'; // Assuming you're using CSS modules
 
-const HomeLayout = ({ children }) => {
+const HomeLayout = ({ children }: any) => {
   return (
     <main className={styles.layout}>
       <GroupSideNav className={styles.sideNav} />
