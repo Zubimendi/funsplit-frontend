@@ -1,0 +1,19 @@
+.layout {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  .sideNav {
+    width: 250px; /* Adjust width as needed */
+    background-color: #f4f4f4; /* Example background for sidebars */
+    border-radius: 10px;
+  }
+  
+  .dashboard {
+    flex-grow: 1; /* This will allow the dashboard to expand and take up remaining space */
+    padding: 20px; /* Some padding around the dashboard */
+    background-color: #fff; /* Background color of the dashboard */
+    overflow-y: auto; /* Enables scrolling for content */
+  }
+  

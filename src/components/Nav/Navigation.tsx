@@ -7,8 +7,9 @@ import Logo from "../Logo/Logo";
 import { googleSignIn } from "@/lib/actions/auth.actions";
 const Navigation = () => {
   const handleGoogleLogin = async () => {
-    await googleSignIn()
+    await googleSignIn();
   };
+  const isLoggedIn = true;
   return (
     <nav className={styles.nav}>
       <Logo />
@@ -20,18 +21,31 @@ const Navigation = () => {
           About
         </Button>
         <Button
-          onClick={() => handleGoogleLogin()}
+          onClick={() => {
+            if (isLoggedIn === false) handleGoogleLogin();
+            else {
+              console.log("Logged out");
+            }
+          }}
           variant="ghost"
           className={styles.googleLoginButton}
         >
-          <Image
-            src={"/google-icon.jpg"}
-            width={30}
-            height={30}
-            alt="Google Icon"
-            className={styles.image}
-          />
-          <p>Sign In to Google</p>
+          {" "}
+          {isLoggedIn ? (
+            <p>Logout</p>
+          ) : (
+            <>
+              {" "}
+              <Image
+                src={"/google-icon.jpg"}
+                width={30}
+                height={30}
+                alt="Google Icon"
+                className={styles.image}
+              />
+              <p>Sign In to Google</p>
+            </>
+          )}
         </Button>
       </div>
     </nav>

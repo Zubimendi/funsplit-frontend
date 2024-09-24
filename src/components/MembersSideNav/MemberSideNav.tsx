@@ -1,9 +1,13 @@
-import React from 'react'
-
-const MemberSideNav = () => {
+import React from "react";
+import MemberList from "../MemberList/MemberList";
+const MemberSideNav = ({className}) => {
   return (
-    <div>MemberSideNav</div>
-  )
-}
+    <nav className={className}>
+      <div>Group Members</div>
+      {/* Render Group Members here */}
+      <MemberList />
+    </nav>
+  );
+};
 
-export default MemberSideNav
+export default MemberSideNav;

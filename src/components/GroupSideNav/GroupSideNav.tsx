@@ -1,9 +1,18 @@
-import React from 'react'
-
-const GroupSideNav = () => {
+import React from "react";
+import Image from "next/image";
+import GroupList from "../GroupList/GroupList";
+const GroupSideNav = ({className}) => {
   return (
-    <div>GroupSideNav</div>
-  )
-}
+    <nav className={className}>
+      <div>
+        <p>Groups</p>
+        {/* Render groups here */}
+        <GroupList />
+      </div>
 
-export default GroupSideNav
+      <button>Create Group</button>
+    </nav>
+  );
+};
+
+export default GroupSideNav;
